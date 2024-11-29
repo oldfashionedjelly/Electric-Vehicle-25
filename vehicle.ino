@@ -5,10 +5,12 @@
 #define PIN_MTR1_DIR_REV       8
 #define PIN_MTR1_PWM           10
 
-// This is def wrong idk what im doing
 #define ENCODER_COUNTS_PER_REV  540     
 #define MM_PER_REV              235.62     
 #define ENCODER_COUNTS_90_DEG   135   
+
+unsigned long motorStartTime = 0;  
+bool isMotorRunning = false;    
 
 void setup() {
   pinMode(PIN_PB_START, INPUT);
@@ -21,21 +23,22 @@ void setup() {
 }
 
 void loop() {
-  if (digitalRead(PIN_PB_START) == LOW) {
-    Serial.println("Start button pressed. Moving forward...");
+  if (digitalRead(PIN_PB_START) == LOW && !isMotorRunning) {
+    motorStartTime = millis();  
+    isMotorRunning = true;  
 
     digitalWrite(PIN_MTR1_DIR_FWD, HIGH);
     digitalWrite(PIN_MTR1_DIR_REV, LOW);
-
     analogWrite(PIN_MTR1_PWM, 255);
-  } else {
-    Serial.println("Start button not pressed. Motors stopped.");
+  }
+
+  if (isMotorRunning && (millis() - motorStartTime >= 5000)) {
+    isMotorRunning = false;
 
     digitalWrite(PIN_MTR1_DIR_FWD, LOW);
     digitalWrite(PIN_MTR1_DIR_REV, LOW);
-
     analogWrite(PIN_MTR1_PWM, 0);
   }
 
-  delay(50);
+  delay(50); 
 }
