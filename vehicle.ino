@@ -5,10 +5,10 @@
 #define PIN_MTR1_DIR_REV       8
 #define PIN_MTR1_PWM           10
 
-#define ENCODER_COUNTS_PER_REV  540     
-#define MM_PER_REV              235.6    // 239.3 w/ rubber bands
+#define ENCODER_COUNTS_PER_REV  240     
+#define MM_PER_REV              477.522    // 152 mm diamter
 
-unsigned long targetDistanceMM = 1000; // Distance in mm (e.g., 1000 mm = 100 cm)
+unsigned long targetDistanceMM = 1000; // mm
 unsigned long targetEncoderCounts;     
 unsigned long encoderCount = 0;        
 bool isMotorRunning = false;          
@@ -42,10 +42,18 @@ void loop() {
   if (isMotorRunning && encoderCount >= targetEncoderCounts) {
     isMotorRunning = false;
 
+    analogWrite(PIN_MTR1_PWM, 0);
     digitalWrite(PIN_MTR1_DIR_FWD, LOW);
     digitalWrite(PIN_MTR1_DIR_REV, LOW);
-    analogWrite(PIN_MTR1_PWM, 0);
 
+    digitalWrite(PIN_MTR1_DIR_FWD, LOW);
+    digitalWrite(PIN_MTR1_DIR_REV, HIGH);
+    analogWrite(PIN_MTR1_PWM, 255); // Reverse power 
+    delay(200); // Reverse duration
+
+    analogWrite(PIN_MTR1_PWM, 0);
+    digitalWrite(PIN_MTR1_DIR_FWD, LOW);
+    digitalWrite(PIN_MTR1_DIR_REV, LOW);
   }
 }
 
