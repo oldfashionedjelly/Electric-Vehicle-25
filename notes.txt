@@ -1,6 +1,6 @@
 Dist, drift, time, over/undershoot
 7: 0.06 (+0.1), 5 sec, 0 
-   0.3 (+0.2), 5 sec, 0.13 over
+   0.3 (+0.2), 5 sec, 0.13 over (not counting this in data bc I realized afterward that the back wheel axle had like shifted so that probably had a lot to do with it)
 7.25: 0.27 (+0.3), 6 sec, 0.01 over
 7.5: 0.22 (+0.4), 6 sec, 0.01 over
 7.75: 0.4 (+0.3), 7 sec, 0.19 over
