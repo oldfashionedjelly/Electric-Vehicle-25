@@ -1,9 +1,8 @@
 Dist, drift, time, over/undershoot
-7: 0.06 (+0.1), 5 sec, 0 
-   0.3 (+0.2), 5 sec, 0.13 over (not counting this in data bc I realized afterward that the back wheel axle had like shifted so that probably had a lot to do with it)
-7.25: 0.27 (+0.3), 6 sec, 0.01 over (moved drift artificially down 0.1 because of same wheel thing)
-7.5: 0.22 (+0.4), 6 sec, 0.01 over
-7.75: 0.4 (+0.3), 7 sec, 0.19 over
+7: 
+7.25:
+7.5:
+7.75:
 8: 
 8.25: 
 8.5: 
@@ -13,3 +12,13 @@ Dist, drift, time, over/undershoot
 9.5:
 9.75:
 10:
+
+
+
+Can distance: between 0 and 1 m to the left
+Track distance: 7 to 10 m
+
+Run Score = 100 + Distance Score + Time Score + Bonuses + Run Penalties
+Distance Score = 2.0 pt/cm x Vehicle Distance.
+Time Score = Absolute value of (Target Time - Run Time)
+Can Bonus = -0.5 x (110 - Inside Can Distance)
