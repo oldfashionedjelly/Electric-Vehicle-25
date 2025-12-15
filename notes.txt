@@ -1,5 +1,5 @@
 *Aiming for 0.75 m left, range is 0-1 m - place the inner can at 0.5 m
-Code dist, wheel angle, launch angle, time at 255, time at 200
+Code dist, wheel angle, launch angle, time at 255, time at 200, edits to braking
 7: 
 7.25:
 7.5:
@@ -16,7 +16,7 @@ Code dist, wheel angle, launch angle, time at 255, time at 200
 
 
 Straight:
-Code dist, time at 255, time at 225, time at 200, time at 175
+Code dist, time at 255, time at 225, time at 200, time at 175, edits to braking
 7: 
 7.25:
 7.5:
