@@ -8,10 +8,12 @@
 #define ENCODER_COUNTS_PER_REV  240     
 #define MM_PER_REV              477.522    // 152 mm diamter
 
-unsigned long targetDistanceMM = 1000; // mm
+unsigned long targetDistanceMM = 10000; // mm
+unsigned long targetTime = 14;
 unsigned long targetEncoderCounts;     
 unsigned long encoderCount = 0;        
-bool isMotorRunning = false;          
+bool isMotorRunning = false;       
+unsigned long motorPower = (255*targetDistanceMM)/(3287.61*targetTime);   
 
 void setup() {
   pinMode(PIN_PB_START, INPUT);
@@ -36,7 +38,7 @@ void loop() {
 
     digitalWrite(PIN_MTR1_DIR_FWD, HIGH);
     digitalWrite(PIN_MTR1_DIR_REV, LOW);
-    analogWrite(PIN_MTR1_PWM, 255);
+    analogWrite(PIN_MTR1_PWM, motorPower);
   }
 
   if (isMotorRunning && encoderCount >= targetEncoderCounts) {
