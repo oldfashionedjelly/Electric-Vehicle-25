@@ -35,3 +35,5 @@ Code dist, time at 255, time at 225, time at 200, time at 175, edits to braking
 Distance Score = 2.0 pt/cm x Vehicle Distance
 Time Score = Absolute value of (Target Time - Run Time)
 Can Bonus = -0.5 x (110 - Inside Can Distance)
+
+Power = 255*dist/237.61*time
