@@ -13,7 +13,7 @@ unsigned long targetTime = 14;
 unsigned long targetEncoderCounts;     
 unsigned long encoderCount = 0;        
 bool isMotorRunning = false;       
-unsigned long motorPower = (255*targetDistanceMM)/(3287.61*targetTime);   
+unsigned long motorPower = (255*targetDistanceMM)/(3287.61*targetTime);   //between 50-255
 
 void setup() {
   pinMode(PIN_PB_START, INPUT);
