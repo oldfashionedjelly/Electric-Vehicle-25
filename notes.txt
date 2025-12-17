@@ -1,5 +1,5 @@
 *Aiming for 0.75 m left, range is 0-1 m - place the inner can at 0.5 m
-Code dist, wheel angle, launch angle
+Code dist, wheel angle
 7: 
 7.25:
 7.5:
