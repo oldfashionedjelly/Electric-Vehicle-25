@@ -1,5 +1,5 @@
 *Aiming for 0.75 m left, range is 0-1 m - place the inner can at 0.5 m
-Code dist, wheel angle, launch angle, break power, break time
+Code dist, wheel angle, launch angle
 7: 
 7.25:
 7.5:
@@ -15,7 +15,7 @@ Code dist, wheel angle, launch angle, break power, break time
 10:
 
 Straight:
-Code dist, break power, break time
+Code dist
 7: 
 7.25:
 7.5:
@@ -29,6 +29,17 @@ Code dist, break power, break time
 9.5:
 9.75:
 10:
+
+Break power, break duration
+50:
+75:
+100:
+125:
+150:
+175:
+200:
+225:
+255:
 
 Distance Score = 2.0 pt/cm x Vehicle Distance
 Time Score = Absolute value of (Target Time - Run Time)
