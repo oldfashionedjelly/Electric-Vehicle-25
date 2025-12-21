@@ -1,4 +1,4 @@
-#define PIN_PB_START           0
+#define PIN_PB_START           4
 #define PIN_MTR1_ENCB          3
 #define PIN_MTR1_ENCA          2
 #define PIN_MTR1_DIR_FWD       7
