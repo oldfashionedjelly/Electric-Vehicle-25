@@ -14,31 +14,14 @@ Code dist, wheel angle
 9.75:
 10:
 
-Straight:
-Code dist
-7: 
-7.25:
-7.5:
-7.75:
-8: 
-8.25: 
-8.5: 
-8.75:
-9:
-9.25:
-9.5:
-9.75:
-10:
-
 Break power, break duration
-50:
-75:
-100:
-125:
+75: 255, 50
+100: 
+125: 255, 150
 150:
-175:
+175: 255, 200
 200:
-225:
+225: 255, 275
 255:
 
 Distance Score = 2.0 pt/cm x Vehicle Distance
