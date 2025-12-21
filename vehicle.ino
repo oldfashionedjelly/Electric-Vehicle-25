@@ -17,13 +17,17 @@ bool isMotorRunning = false;
 unsigned long motorPower = (255*targetDistanceMM)/(2387.61*targetTime);   //between 75-255
 
 void setup() {
-  pinMode(PIN_PB_START, INPUT);
+  pinMode(PIN_PB_START, INPUT_PULLUP);
   pinMode(PIN_MTR1_ENCA, INPUT);
   pinMode(PIN_MTR1_ENCB, INPUT);
 
   pinMode(PIN_MTR1_DIR_FWD, OUTPUT);
   pinMode(PIN_MTR1_DIR_REV, OUTPUT);
   pinMode(PIN_MTR1_PWM, OUTPUT);
+
+  digitalWrite(PIN_MTR1_DIR_FWD, LOW);
+  digitalWrite(PIN_MTR1_DIR_REV, LOW);
+  analogWrite(PIN_MTR1_PWM, 0);
 
   attachInterrupt(digitalPinToInterrupt(PIN_MTR1_ENCA), encoderISR, RISING);
 
