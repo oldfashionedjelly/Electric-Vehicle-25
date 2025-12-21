@@ -7,13 +7,14 @@
 
 #define ENCODER_COUNTS_PER_REV  240     
 #define MM_PER_REV              477.522    // 152 mm diamter
+//289.027 - 92 mm diameter
 
 unsigned long targetDistanceMM = 10000; // mm
 unsigned long targetTime = 14;
 unsigned long targetEncoderCounts;     
 unsigned long encoderCount = 0;        
 bool isMotorRunning = false;       
-unsigned long motorPower = (255*targetDistanceMM)/(3287.61*targetTime);   //between 50-255
+unsigned long motorPower = (255*targetDistanceMM)/(2387.61*targetTime);   //between 75-255
 
 void setup() {
   pinMode(PIN_PB_START, INPUT);
