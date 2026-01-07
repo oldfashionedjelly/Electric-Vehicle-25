@@ -9,7 +9,7 @@
 #define MM_PER_REV             477.522   // 152 mm wheel
 
 const float lengthDistanceMM = 4000.0; // straight distance
-const float canDistanceMM    = 250.0;   // lateral offset (0–1000 mm)
+const float canDistanceMM    = 0.0;   // lateral offset (0–1000 mm)
 const float targetTimeSec    = 10.0;    // total forward + braking time
 
 float Kp = 0.06;
